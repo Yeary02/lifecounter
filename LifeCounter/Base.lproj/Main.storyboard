@@ -3,6 +3,7 @@
     <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,424 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QF-8R-8WV">
-                                <rect key="frame" x="122.5" y="224" width="75.5" height="32"/>
-                                <color key="backgroundColor" systemColor="systemCyanColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75.5" id="0FB-xB-v3i"/>
-                                    <constraint firstAttribute="height" constant="32" id="f6a-mh-g1c"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Result">
-                                        <attributes>
-                                            <font key="NSFont" size="24" name="HelveticaNeue-Medium"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="jHU-MC-R38">
-                                <rect key="frame" x="19.5" y="55" width="281" height="34"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dob-SN-4V3">
-                                        <rect key="frame" x="0.0" y="0.0" width="67.5" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="-5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Udy-KA-otl">
-                                        <rect key="frame" x="69.5" y="0.0" width="43" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="textFieldDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="izQ-Xa-UvI"/>
-                                        </connections>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsG-xt-KH2">
-                                        <rect key="frame" x="114.5" y="0.0" width="37" height="34"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="-1"/>
-                                        <connections>
-                                            <action selector="buttonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="biX-UW-WcZ"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  20  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VnR-10-clO">
-                                        <rect key="frame" x="153.5" y="0.0" width="38" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2h-M3-Bn3">
-                                        <rect key="frame" x="193.5" y="0.0" width="39.5" height="34"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="+1"/>
-                                        <connections>
-                                            <action selector="buttonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BxK-Vf-Mnt"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rZC-J9-YWA">
-                                        <rect key="frame" x="235" y="0.0" width="46" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="textFieldDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="YFt-bW-xhH"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="sTT-Te-xGU">
-                                <rect key="frame" x="18.5" y="104" width="283.5" height="34"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v22-SI-3cD">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="-5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IiD-Sz-P9C">
-                                        <rect key="frame" x="72" y="0.0" width="43" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="textFieldDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="lqq-ig-Jwx"/>
-                                        </connections>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeT-UR-l7B">
-                                        <rect key="frame" x="117" y="0.0" width="37" height="34"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="-1"/>
-                                        <connections>
-                                            <action selector="buttonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jwf-Fu-cP7"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  20  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6A-UC-w5F">
-                                        <rect key="frame" x="156" y="0.0" width="38" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVF-HN-wLo">
-                                        <rect key="frame" x="196" y="0.0" width="39.5" height="34"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="+1"/>
-                                        <connections>
-                                            <action selector="buttonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ROF-qi-wlN"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gRO-mf-fsX">
-                                        <rect key="frame" x="237.5" y="0.0" width="46" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="textFieldDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="ECZ-2M-9of"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Fso-Id-zEQ">
-                                <rect key="frame" x="18" y="153" width="284" height="34"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 3: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsj-cD-9q2">
-                                        <rect key="frame" x="0.0" y="0.0" width="70.5" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="-5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LsQ-P7-3Cr">
-                                        <rect key="frame" x="72.5" y="0.0" width="43" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="textFieldDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Hgo-qY-dDc"/>
-                                        </connections>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezl-jo-MDi">
-                                        <rect key="frame" x="117.5" y="0.0" width="37" height="34"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="-1"/>
-                                        <connections>
-                                            <action selector="buttonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S1t-3f-xyc"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  20  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07b-aC-4CO">
-                                        <rect key="frame" x="156.5" y="0.0" width="38" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUm-Hg-jHW">
-                                        <rect key="frame" x="196.5" y="0.0" width="39.5" height="34"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="+1"/>
-                                        <connections>
-                                            <action selector="buttonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fih-AY-MhR"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ldk-Ba-gdN">
-                                        <rect key="frame" x="238" y="0.0" width="46" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="textFieldDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="DGs-lo-6pm"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="9w0-VL-QAd">
-                                <rect key="frame" x="18" y="202" width="284" height="34"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 4: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9N-Vq-ZVg">
-                                        <rect key="frame" x="0.0" y="0.0" width="70.5" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="-5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J8E-15-UAH">
-                                        <rect key="frame" x="72.5" y="0.0" width="43" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="textFieldDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="ZUi-Qr-73Q"/>
-                                        </connections>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GpC-jr-32B">
-                                        <rect key="frame" x="117.5" y="0.0" width="37" height="34"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="-1"/>
-                                        <connections>
-                                            <action selector="buttonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZPh-Nc-eWY"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  20  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktk-Ta-G1s">
-                                        <rect key="frame" x="156.5" y="0.0" width="38" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chA-jr-QN3">
-                                        <rect key="frame" x="196.5" y="0.0" width="39.5" height="34"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="+1"/>
-                                        <connections>
-                                            <action selector="buttonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="grL-g5-kwb"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rmf-tY-iO1">
-                                        <rect key="frame" x="238" y="0.0" width="46" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="textFieldDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="woX-5I-hOH"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="v8L-Bc-6gD">
-                                <rect key="frame" x="18" y="251" width="284" height="34"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 5: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1Q-rK-emM">
-                                        <rect key="frame" x="0.0" y="0.0" width="70.5" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="-5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R13-dz-Yem">
-                                        <rect key="frame" x="72.5" y="0.0" width="43" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="textFieldDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="05Q-m7-o6E"/>
-                                        </connections>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWF-gX-fFj">
-                                        <rect key="frame" x="117.5" y="0.0" width="37" height="34"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="-1"/>
-                                        <connections>
-                                            <action selector="buttonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hf5-7r-8Dn"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  20  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRO-c9-FUE">
-                                        <rect key="frame" x="156.5" y="0.0" width="38" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1KH-yo-9bM">
-                                        <rect key="frame" x="196.5" y="0.0" width="39.5" height="34"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="+1"/>
-                                        <connections>
-                                            <action selector="buttonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qeS-C6-MOf"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0sE-3h-GGt">
-                                        <rect key="frame" x="238" y="0.0" width="46" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="textFieldDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="vvE-Cw-F3P"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4Me-pz-4eh">
-                                <rect key="frame" x="18" y="300" width="284" height="34"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 6: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gs8-Ln-wpX">
-                                        <rect key="frame" x="0.0" y="0.0" width="70.5" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="-5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bpk-Zb-1RC">
-                                        <rect key="frame" x="72.5" y="0.0" width="43" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="textFieldDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Sqs-Qc-ZpA"/>
-                                        </connections>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKI-Hd-4Ng">
-                                        <rect key="frame" x="117.5" y="0.0" width="37" height="34"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="-1"/>
-                                        <connections>
-                                            <action selector="buttonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dbO-0C-00U"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  20  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fv-sN-X2h">
-                                        <rect key="frame" x="156.5" y="0.0" width="38" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pb-9a-y92">
-                                        <rect key="frame" x="196.5" y="0.0" width="39.5" height="34"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="+1"/>
-                                        <connections>
-                                            <action selector="buttonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NtO-hZ-d7X"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8dR-1G-gNF">
-                                        <rect key="frame" x="238" y="0.0" width="46" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="textFieldDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Ofs-lN-eHA"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="iMy-ew-eBV">
-                                <rect key="frame" x="19" y="349" width="282.5" height="34"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 7: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dk-gt-DCY">
-                                        <rect key="frame" x="0.0" y="0.0" width="69" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="-5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ip-51-Vwx">
-                                        <rect key="frame" x="71" y="0.0" width="43" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="textFieldDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="W9C-eo-HiX"/>
-                                        </connections>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rda-1l-E4o">
-                                        <rect key="frame" x="116" y="0.0" width="37" height="34"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="-1"/>
-                                        <connections>
-                                            <action selector="buttonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9a3-aL-1SQ"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  20  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4p-aU-BBh">
-                                        <rect key="frame" x="155" y="0.0" width="38" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lw6-8A-Qiq">
-                                        <rect key="frame" x="195" y="0.0" width="39.5" height="34"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="+1"/>
-                                        <connections>
-                                            <action selector="buttonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hd9-Kd-OA1"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qEj-0I-4wd">
-                                        <rect key="frame" x="236.5" y="0.0" width="46" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="textFieldDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="xuv-kN-r1A"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="uZp-7T-4z9">
-                                <rect key="frame" x="18" y="398" width="284" height="34"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 8: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgc-2e-QEU">
-                                        <rect key="frame" x="0.0" y="0.0" width="70.5" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="-5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="km4-Ya-F1B">
-                                        <rect key="frame" x="72.5" y="0.0" width="43" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="textFieldDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="urQ-lz-ClB"/>
-                                        </connections>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R83-Ty-bpW">
-                                        <rect key="frame" x="117.5" y="0.0" width="37" height="34"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="-1"/>
-                                        <connections>
-                                            <action selector="buttonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PJ8-br-aie"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  20  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11s-gB-ZLI">
-                                        <rect key="frame" x="156.5" y="0.0" width="38" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjv-BE-oqr">
-                                        <rect key="frame" x="196.5" y="0.0" width="39.5" height="34"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="+1"/>
-                                        <connections>
-                                            <action selector="buttonHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vTS-FI-1d6"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sCd-7I-qRE">
-                                        <rect key="frame" x="238" y="0.0" width="46" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="textFieldDidEndEditing:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="n2F-DI-b1B"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ur-to-0e0">
-                                <rect key="frame" x="207" y="9" width="93.5" height="31"/>
+                                <rect key="frame" x="211.5" y="9" width="93.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add Player"/>
                                 <connections>
-                                    <action selector="addPlayerButtonTouchedUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rgv-y8-zwj"/>
+                                    <action selector="addPlayerButtonTouchedUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xUO-7r-QXq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsx-1i-dWh">
-                                <rect key="frame" x="19.5" y="9" width="70.5" height="31"/>
+                                <rect key="frame" x="15" y="9" width="70.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="History"/>
                                 <connections>
@@ -441,85 +34,104 @@
                                     <segue destination="BB0-zx-eh3" kind="show" identifier="history_vc" id="qyS-aL-1jP"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8GR-AF-ukd">
+                                <rect key="frame" x="0.0" y="55" width="320" height="425"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="50" id="jde-iY-qyp" customClass="TableViewCell" customModule="LifeCounter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="320" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jde-iY-qyp" id="STh-ks-Sgm">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyy-1o-lvO">
+                                                    <rect key="frame" x="125" y="14.5" width="21" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EWP-Oo-7XM">
+                                                    <rect key="frame" x="231" y="8" width="35" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAs-Eh-3dM">
+                                                    <rect key="frame" x="16" y="14.5" width="59" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjd-7E-IcU">
+                                                    <rect key="frame" x="195" y="9.5" width="31" height="31"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="tinted" title="-"/>
+                                                    <connections>
+                                                        <action selector="minusButtonTouchUpInside:" destination="jde-iY-qyp" eventType="touchUpInside" id="UGA-Mn-sl2"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXd-sc-dJi">
+                                                    <rect key="frame" x="271" y="9.5" width="33" height="31"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="tinted" title="+"/>
+                                                    <connections>
+                                                        <action selector="plusButtonTouchUpInside:" destination="jde-iY-qyp" eventType="touchUpInside" id="MTA-Ds-6qm"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aXd-sc-dJi" firstAttribute="centerY" secondItem="STh-ks-Sgm" secondAttribute="centerY" id="1b7-jD-z1k"/>
+                                                <constraint firstItem="wAs-Eh-3dM" firstAttribute="centerY" secondItem="STh-ks-Sgm" secondAttribute="centerY" id="6Bg-sg-bnf"/>
+                                                <constraint firstItem="EWP-Oo-7XM" firstAttribute="leading" secondItem="hjd-7E-IcU" secondAttribute="trailing" constant="5" id="HdJ-Al-PqN"/>
+                                                <constraint firstItem="wAs-Eh-3dM" firstAttribute="leading" secondItem="STh-ks-Sgm" secondAttribute="leading" constant="16" id="N8C-hc-NTQ"/>
+                                                <constraint firstItem="Nyy-1o-lvO" firstAttribute="leading" secondItem="wAs-Eh-3dM" secondAttribute="trailing" constant="50" id="ReO-QR-lAy"/>
+                                                <constraint firstItem="EWP-Oo-7XM" firstAttribute="centerY" secondItem="STh-ks-Sgm" secondAttribute="centerY" id="fxv-kq-rb1"/>
+                                                <constraint firstItem="Nyy-1o-lvO" firstAttribute="centerY" secondItem="STh-ks-Sgm" secondAttribute="centerY" id="iNG-vf-uJC"/>
+                                                <constraint firstItem="hjd-7E-IcU" firstAttribute="centerY" secondItem="STh-ks-Sgm" secondAttribute="centerY" id="vDy-ME-hOe"/>
+                                                <constraint firstItem="aXd-sc-dJi" firstAttribute="leading" secondItem="EWP-Oo-7XM" secondAttribute="trailing" constant="5" id="wPv-jZ-7Et"/>
+                                                <constraint firstAttribute="trailing" secondItem="aXd-sc-dJi" secondAttribute="trailing" constant="16" id="xyp-Qm-2GP"/>
+                                                <constraint firstItem="hjd-7E-IcU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Nyy-1o-lvO" secondAttribute="trailing" constant="30" id="z6L-X3-sYD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="inputTextField" destination="EWP-Oo-7XM" id="myK-7C-aN5"/>
+                                            <outlet property="minusButton" destination="hjd-7E-IcU" id="pN5-en-0Cv"/>
+                                            <outlet property="playerNameLabel" destination="wAs-Eh-3dM" id="eOL-1X-PXO"/>
+                                            <outlet property="plusButton" destination="aXd-sc-dJi" id="saq-63-hSx"/>
+                                            <outlet property="scoreLabel" destination="Nyy-1o-lvO" id="lXY-g2-Zlv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUB-0O-KaJ">
+                                <rect key="frame" x="133" y="228" width="54.5" height="24"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="sTT-Te-xGU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1cf-2l-3mo"/>
-                            <constraint firstItem="iMy-ew-eBV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1zX-bQ-L1N"/>
-                            <constraint firstItem="4QF-8R-8WV" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="35X-w1-lnO"/>
-                            <constraint firstItem="uZp-7T-4z9" firstAttribute="top" secondItem="iMy-ew-eBV" secondAttribute="bottom" constant="15" id="3cc-E5-LQs"/>
-                            <constraint firstItem="sTT-Te-xGU" firstAttribute="top" secondItem="jHU-MC-R38" secondAttribute="bottom" constant="15" id="4M5-KB-win"/>
-                            <constraint firstItem="9w0-VL-QAd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5XQ-tf-SJb"/>
-                            <constraint firstItem="Fso-Id-zEQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BIJ-uR-Vb1"/>
-                            <constraint firstItem="iMy-ew-eBV" firstAttribute="top" secondItem="4Me-pz-4eh" secondAttribute="bottom" constant="15" id="Gsl-b6-sXe"/>
-                            <constraint firstItem="7ur-to-0e0" firstAttribute="trailing" secondItem="jHU-MC-R38" secondAttribute="trailing" id="J5B-ib-WIo"/>
-                            <constraint firstItem="v8L-Bc-6gD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="O3i-FS-R9H"/>
-                            <constraint firstItem="4Me-pz-4eh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OvK-fg-9mY"/>
-                            <constraint firstItem="4Me-pz-4eh" firstAttribute="top" secondItem="v8L-Bc-6gD" secondAttribute="bottom" constant="15" id="TQN-iU-JGX"/>
-                            <constraint firstItem="uZp-7T-4z9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bBz-AU-28F"/>
-                            <constraint firstItem="jHU-MC-R38" firstAttribute="top" secondItem="7ur-to-0e0" secondAttribute="bottom" constant="15" id="fdi-JW-KmS"/>
-                            <constraint firstItem="rsx-1i-dWh" firstAttribute="leading" secondItem="jHU-MC-R38" secondAttribute="leading" id="kRP-1W-til"/>
-                            <constraint firstItem="jHU-MC-R38" firstAttribute="top" secondItem="rsx-1i-dWh" secondAttribute="bottom" constant="15" id="lUr-Ui-UGm"/>
-                            <constraint firstItem="4QF-8R-8WV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nnI-Xi-U7x"/>
-                            <constraint firstItem="9w0-VL-QAd" firstAttribute="top" secondItem="Fso-Id-zEQ" secondAttribute="bottom" constant="15" id="qeB-ct-m1N"/>
-                            <constraint firstItem="jHU-MC-R38" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rae-bh-vEv"/>
-                            <constraint firstItem="v8L-Bc-6gD" firstAttribute="top" secondItem="9w0-VL-QAd" secondAttribute="bottom" constant="15" id="tWm-Jg-kSH"/>
-                            <constraint firstItem="Fso-Id-zEQ" firstAttribute="top" secondItem="sTT-Te-xGU" secondAttribute="bottom" constant="15" id="wbk-vF-2XH"/>
-                            <constraint firstItem="jHU-MC-R38" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-168" id="zSJ-mj-XMt"/>
+                            <constraint firstItem="8GR-AF-ukd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9cB-5Z-FDg"/>
+                            <constraint firstItem="rsx-1i-dWh" firstAttribute="leading" secondItem="8GR-AF-ukd" secondAttribute="leading" constant="15" id="C4z-mE-ryx"/>
+                            <constraint firstItem="rsx-1i-dWh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="FXI-mc-bkN"/>
+                            <constraint firstItem="EUB-0O-KaJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ige-7V-atQ"/>
+                            <constraint firstItem="EUB-0O-KaJ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="URV-8h-OhB"/>
+                            <constraint firstItem="8GR-AF-ukd" firstAttribute="top" secondItem="7ur-to-0e0" secondAttribute="bottom" constant="15" id="dLa-cH-2Ud"/>
+                            <constraint firstItem="7ur-to-0e0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rsx-1i-dWh" secondAttribute="trailing" constant="8" symbolic="YES" id="e20-hc-hkk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8GR-AF-ukd" secondAttribute="bottom" id="ekv-55-RWF"/>
+                            <constraint firstItem="8GR-AF-ukd" firstAttribute="top" secondItem="rsx-1i-dWh" secondAttribute="bottom" constant="15" id="kpP-71-DDY"/>
+                            <constraint firstItem="7ur-to-0e0" firstAttribute="trailing" secondItem="8GR-AF-ukd" secondAttribute="trailing" constant="-15" id="sRt-9w-KKE"/>
+                            <constraint firstItem="8GR-AF-ukd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="w7x-mw-n1i"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addButton" destination="7ur-to-0e0" id="SQf-kb-NFT"/>
-                        <outlet property="p1_lifeCountLabel" destination="VnR-10-clO" id="vgV-0K-sl2"/>
-                        <outlet property="p1_minus" destination="Udy-KA-otl" id="7SE-fT-TQV"/>
-                        <outlet property="p1_minus1" destination="xsG-xt-KH2" id="sfw-F0-4KN"/>
-                        <outlet property="p1_plus" destination="rZC-J9-YWA" id="83E-Av-xk5"/>
-                        <outlet property="p1_plus1" destination="z2h-M3-Bn3" id="Apb-fr-gtR"/>
-                        <outlet property="p1_stack" destination="jHU-MC-R38" id="VUq-Ga-Gnk"/>
-                        <outlet property="p2_lifeCountLabel" destination="p6A-UC-w5F" id="k0g-vS-vnt"/>
-                        <outlet property="p2_minus" destination="IiD-Sz-P9C" id="Brj-p1-olp"/>
-                        <outlet property="p2_minus1" destination="yeT-UR-l7B" id="sJo-vD-fs0"/>
-                        <outlet property="p2_plus" destination="gRO-mf-fsX" id="T34-Ji-5k5"/>
-                        <outlet property="p2_plus1" destination="tVF-HN-wLo" id="7ou-le-kk1"/>
-                        <outlet property="p2_stack" destination="sTT-Te-xGU" id="yKz-lx-S1K"/>
-                        <outlet property="p3_lifeCountLabel" destination="07b-aC-4CO" id="uvi-Rb-RcZ"/>
-                        <outlet property="p3_minus" destination="LsQ-P7-3Cr" id="3TV-bb-xer"/>
-                        <outlet property="p3_minus1" destination="ezl-jo-MDi" id="uvn-lo-pkk"/>
-                        <outlet property="p3_plus" destination="Ldk-Ba-gdN" id="UYs-7j-c8V"/>
-                        <outlet property="p3_plus1" destination="sUm-Hg-jHW" id="qyH-Bz-3S9"/>
-                        <outlet property="p3_stack" destination="Fso-Id-zEQ" id="P2f-V4-bV9"/>
-                        <outlet property="p4_lifeCountLabel" destination="ktk-Ta-G1s" id="PcD-ry-7aX"/>
-                        <outlet property="p4_minus" destination="J8E-15-UAH" id="Fq5-5W-q1B"/>
-                        <outlet property="p4_minus1" destination="GpC-jr-32B" id="kfI-j5-yJr"/>
-                        <outlet property="p4_plus" destination="rmf-tY-iO1" id="JLe-EU-Nwi"/>
-                        <outlet property="p4_plus1" destination="chA-jr-QN3" id="OfP-su-K99"/>
-                        <outlet property="p4_stack" destination="9w0-VL-QAd" id="bz9-vB-xVP"/>
-                        <outlet property="p5_lifeCountLabel" destination="SRO-c9-FUE" id="nQB-XP-ZGL"/>
-                        <outlet property="p5_minus" destination="R13-dz-Yem" id="chd-8x-vjn"/>
-                        <outlet property="p5_minus1" destination="NWF-gX-fFj" id="MFh-oF-ceT"/>
-                        <outlet property="p5_plus" destination="0sE-3h-GGt" id="zr0-hq-zgb"/>
-                        <outlet property="p5_plus1" destination="1KH-yo-9bM" id="Otw-if-z4q"/>
-                        <outlet property="p5_stack" destination="v8L-Bc-6gD" id="ggO-98-LA1"/>
-                        <outlet property="p6_lifeCountLabel" destination="8fv-sN-X2h" id="KoD-Tu-naI"/>
-                        <outlet property="p6_minus" destination="Bpk-Zb-1RC" id="URU-dM-suH"/>
-                        <outlet property="p6_minus1" destination="dKI-Hd-4Ng" id="vBn-Dp-Y0W"/>
-                        <outlet property="p6_plus" destination="8dR-1G-gNF" id="cSB-gK-UCh"/>
-                        <outlet property="p6_plus1" destination="8Pb-9a-y92" id="ysM-uJ-NTj"/>
-                        <outlet property="p6_stack" destination="4Me-pz-4eh" id="zYe-cX-Y6d"/>
-                        <outlet property="p7_lifeCountLabel" destination="N4p-aU-BBh" id="J8A-Cn-VdP"/>
-                        <outlet property="p7_minus" destination="4ip-51-Vwx" id="mrD-gg-Dax"/>
-                        <outlet property="p7_minus1" destination="Rda-1l-E4o" id="HQw-vy-NDg"/>
-                        <outlet property="p7_plus" destination="qEj-0I-4wd" id="sqb-G1-nlL"/>
-                        <outlet property="p7_plus1" destination="Lw6-8A-Qiq" id="MSc-aA-4lA"/>
-                        <outlet property="p7_stack" destination="iMy-ew-eBV" id="OGm-5d-Ptz"/>
-                        <outlet property="p8_lifeCountLabel" destination="11s-gB-ZLI" id="Vg7-3E-QZ9"/>
-                        <outlet property="p8_minus" destination="km4-Ya-F1B" id="UlR-7W-JwG"/>
-                        <outlet property="p8_minus1" destination="R83-Ty-bpW" id="MdM-ds-OR4"/>
-                        <outlet property="p8_plus" destination="sCd-7I-qRE" id="1bO-lq-Ku3"/>
-                        <outlet property="p8_plus1" destination="Sjv-BE-oqr" id="UbG-3D-XaI"/>
-                        <outlet property="p8_stack" destination="uZp-7T-4z9" id="6uH-iD-dWX"/>
-                        <outlet property="resultLabel" destination="4QF-8R-8WV" id="zez-3h-Kzb"/>
+                        <outlet property="addPlayerButton" destination="7ur-to-0e0" id="SQf-kb-NFT"/>
+                        <outlet property="historyButton" destination="rsx-1i-dWh" id="tef-DE-YGz"/>
+                        <outlet property="resultLabel" destination="EUB-0O-KaJ" id="xzT-Qu-LT0"/>
+                        <outlet property="tableView" destination="8GR-AF-ukd" id="oXX-De-Dkt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -567,11 +179,11 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
